@@ -1,0 +1,19 @@
+img {
+  border-radius: 10px;
+  position: relative;
+  min-width: 320px;
+  width: 140px;
+  height: 350px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2), inset -5px -5px 5px rgba(255, 255, 255, 0.1), 5px 5px 5px rgba(0, 0, 0, 0.5), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+img:hover {
+  transition: 0.5s;
+  transform: translateY(-50px);
+  box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5);
+}
