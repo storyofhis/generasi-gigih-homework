@@ -1,7 +1,8 @@
 import "./App.css";
-import Image from "./image";
-import Button from "./Button";
-import Input from "./input";
+import Image from "./components/image";
+import Button from "./components/Button";
+import Input from "./components/input";
+import Data from "./components/data";
 
 function App() {
   return (
@@ -16,8 +17,8 @@ function App() {
           </div>
         </center>
         <div className="content">
-          <Image alt="album-poster" />
-          <Button />
+          <Image name={Data.name} url={Data.album.images[0].url} album={Data.album} />
+          <Button name="Submit" />
         </div>
       </header>
     </div>

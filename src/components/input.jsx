@@ -9,7 +9,7 @@ function Input() {
         <br />
         <textarea name="comment" form="usrform" placeholder="Enter the Description here..." wrap="off" cols="30" rows="5" />
       </form>
-      <Button>Search</Button>
+      <Button name="Submit" />
     </div>
   );
 }
