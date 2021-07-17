@@ -17,7 +17,9 @@ function App() {
           </div>
         </center>
         <div className="content">
-          <Image name={Data.name} url={Data.album.images[0].url} album={Data.album} />
+          {Data.map((item) => (
+            <Image key={item.id} url={item.album.images[0].url} name={item.name} artistName={item.artists[0].name} album={item.album.name} />
+          ))}
           <Button name="Submit" />
         </div>
       </header>
