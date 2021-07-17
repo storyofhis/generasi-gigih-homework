@@ -16,12 +16,12 @@ function App() {
             <Input />
           </div>
         </center>
-        <div className="content">
-          {Data.map((item) => (
+        {Data.map((item) => (
+          <div className="content">
             <Image key={item.id} url={item.album.images[0].url} name={item.name} artistName={item.artists[0].name} album={item.album.name} />
-          ))}
-          <Button name="Submit" />
-        </div>
+            <Button name="Play" />
+          </div>
+        ))}
       </header>
     </div>
   );

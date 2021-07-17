@@ -18,15 +18,16 @@ h1:hover {
   font-weight: bold;
 }
 .content {
-  margin: 10px;
+  margin: 50px;
   padding: 10px;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
   border-radius: 30px;
   background-image: linear-gradient(to right, #1a2630, #1b3030, #00fa92);
-  width: 30%;
-  height: 30%;
+  width: 430px;
+  height: 670px;
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2), inset -5px -5px 5px rgba(255, 255, 255, 0.1), 5px 5px 5px rgba(0, 0, 0, 0.5), -5px -5px 15px rgba(255, 255, 255, 0.1);
   margin-top: 100px;
+  display: inline-block;
 }
 
 .App-input {
