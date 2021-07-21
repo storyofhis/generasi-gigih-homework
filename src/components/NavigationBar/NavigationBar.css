@@ -1,0 +1,11 @@
+.NavigationBar {
+  width: 100%;
+  background-color: black;
+  color: white;
+  capacity: white;
+  position: fixed;
+  top: 0;
+}
+a {
+  color: white;
+}
