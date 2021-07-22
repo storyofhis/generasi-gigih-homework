@@ -9,14 +9,14 @@ const SignUpForm = () => {
       <form
         onSubmit={(event) => {
           event.preventDefault();
-          alert(`${email} ${password}`);
+          alert(`${email} already login`);
         }}
       >
         <label>Email</label>
         <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="example@mail.com" />
         <label>Password</label>
         <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} placeholder="password" />
-        <button type="submit">Sign Up</button>
+        <button type="submit">Log In</button>
       </form>
     </div>
   );

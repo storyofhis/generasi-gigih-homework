@@ -3,7 +3,6 @@ import Button from "../Button";
 import Image from "../image";
 import Input from "../input";
 import Data from "../data";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function Login() {
   return (

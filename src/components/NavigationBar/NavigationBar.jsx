@@ -12,8 +12,11 @@ function NavigationBar() {
             <Link to={ROUTES.HOME}>
               <li>Home</li>
             </Link>
-            <Link to={ROUTES.SIGN_UP}>
-              <li>Sign Up</li>
+            <Link to={ROUTES.LOG_IN}>
+              <li>Login</li>
+            </Link>
+            <Link to={ROUTES.WEB_APP}>
+              <li>WebApp</li>
             </Link>
           </ul>
         </nav>
