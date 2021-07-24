@@ -1,66 +1,12 @@
+body {
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+}
+
 .App {
-  text-align: center;
-  font-family: sans-serif;
-  background: linear-gradient(90deg, #a2f7c5 0%, #184846 100%);
-  width: 100%;
-  height: 100%;
-}
-.App-title {
-  text-align: center;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: inset -3px -3px 2px rgba(0, 0, 0, 0.2);
-  background-image: linear-gradient(to right, #1a2630, #1b3030, #00fa92);
-}
-h1:hover {
-  text-align: center;
-  font-weight: bold;
-}
-.content {
-  margin: 50px;
-  padding: 10px;
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 30px;
-  background-image: linear-gradient(to right, #1a2630, #1b3030, #00fa92);
-  width: 430px;
-  height: 670px;
-  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2), inset -5px -5px 5px rgba(255, 255, 255, 0.1), 5px 5px 5px rgba(0, 0, 0, 0.5), -5px -5px 15px rgba(255, 255, 255, 0.1);
-  margin-top: 100px;
-  display: inline-block;
-}
-
-.App-input {
-  width: 30%;
-  text-align: center;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 50px;
-  box-shadow: inset -3px -3px 2px rgba(0, 0, 0, 0.2);
-  background-image: linear-gradient(to right, #1a2630, #1b3030, #00fa92);
-}
-
-.App-title,
-.App-input,
-.content {
-  color: white;
-}
-
-/* Rule yang dituliskan dalam block @media di bawah akan diterapkan pada device yang memiliki ukuran viewport di bawah 600px */
-@media screen and (max-width: 600px) {
-  .App {
-    width: 100%;
-    padding: auto;
-  }
-  .App-title {
-    padding: auto;
-    margin: auto;
-  }
-  Image,
-  Button {
-    margin: 0px;
-    padding: 0px;
-    width: auto;
-    height: auto;
-  }
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
 }
