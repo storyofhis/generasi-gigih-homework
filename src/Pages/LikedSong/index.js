@@ -1,9 +1,9 @@
 import React from "react";
 
-function index(props) {
+function index() {
   return (
     <div>
-      {props.artists}, {props.album}
+      <h1>Liked Song Page</h1>
     </div>
   );
 }

@@ -1,15 +1,12 @@
+import Style from "./style.module.css";
 import React from "react";
-import "./Button.css";
 
-function index({ text, url }) {
-  const handleClick = () => {
-    window.location = url;
-  };
+const Button = ({ text }) => {
   return (
-    <button type="submit" className="btn" onClick={handleClick}>
+    <button type="submit" className={Style.Button}>
       {text}
     </button>
   );
-}
+};
 
-export default index;
+export default Button;

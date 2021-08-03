@@ -1,21 +1,20 @@
-import React from "react";
-import "./Card.css";
-import Image from "../Image/index";
-import Button from "../Button/index";
-import Description from "../Description/indes";
+import Style from "./style.module.css";
+import Image from "../Image";
+import Description from "../Description";
 
-function Card(props) {
+const Card = ({ title, artist, album, image, handleSelect, btnText }) => {
   return (
-    <div className="card">
-      <div className="container">
-        <Image src={props.image} />
-        <div className="right">
-          <Description title={props.title} artist={props.artist} album={props.album} />
-          <Button text="SELECT" url={props.url} />
+    <div className={Style.card}>
+      <div className={Style.container}>
+        <Image src={image} />
+        <div className={Style.right}>
+          <Description title={title} artist={artist} album={album} />
         </div>
+      </div>
+      <div onClick={handleSelect} className={Style.btnSelect}>
+        {btnText}
       </div>
     </div>
   );
-}
-
+};
 export default Card;

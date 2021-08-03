@@ -1,30 +1,23 @@
-import React, { useState, useEffect } from "react";
-import Navbar from "./style.module.css";
-import Search from "../Search/Index";
-import Button from "../Button";
+import React from "react";
+import { Link } from "react-router-dom";
+import style from "./style.module.css";
 
-function Index({ handleSearch, handleClick }) {
-  const [Auth, setAuth] = useState(false);
-
-  useEffect(() => {
-    if (window.location.hash) {
-      setAuth(true);
-    }
-  }, []);
-
+export default function Index({ handleClick }) {
   return (
     <header>
-      <div className={Navbar.logo}>myMusic</div>
-      {Auth ? (
-        <div>
-          <Search handleSubmit={handleSearch} />
-        </div>
-      ) : (
-        <div onClick={handleClick}>
-          <Button text="AUTH" />
-        </div>
-      )}
+      <Link className={style.logo} to="/">
+        myMUSIC
+      </Link>
+      <div className={style.navLeft}>
+        <ul>
+          <li>Premium</li>
+          <li>About</li>
+          <li>Support</li>
+          <li onClick={handleClick}>
+            <div className={style.btnAuth}>LOGIN</div>
+          </li>
+        </ul>
+      </div>
     </header>
   );
 }
-export default Index;

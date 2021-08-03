@@ -3,12 +3,57 @@ header {
   justify-content: space-between;
   align-content: center;
   align-items: center;
-  border-bottom: 2px solid #f0f3f9;
-  padding: 20px;
+  padding: 30px 50px;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  backdrop-filter: blur(10px);
 }
 
 .logo {
+  /* font-family: 'Lobster', cursive; */
+  font-family: "Righteous", cursive;
   font-size: 30px;
   font-weight: 900;
-  color: rgb(108, 111, 119);
+  color: #b79fe2;
+  text-decoration: none;
+}
+
+.navLeft ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  align-items: center;
+}
+
+.navLeft li {
+  font-family: "Nunito", sans-serif;
+  margin-left: 30px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  color: #c5b7e0;
+  transition: all 0.2s ease-out;
+}
+
+.navLeft li:hover {
+  color: #c8b1f7;
+}
+
+.btnAuth {
+  border: none;
+  outline: none;
+  background: #b79fe2;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btnAuth:hover {
+  background: #9382b4;
 }

@@ -1,4 +1,4 @@
-.btn {
+.button {
   border: none;
   outline: none;
   background: rgb(156, 159, 167);
@@ -13,12 +13,12 @@
   transition: all 0.2s ease-in-out;
 }
 
-.btn:hover {
+.button:hover {
   background: rgb(135, 138, 143);
   transition: none;
 }
 
-.btn:active {
+.button:active {
   box-shadow: none;
   position: relative;
   top: 4px;
