@@ -1,30 +1,26 @@
 import "./App.css";
+import Homepage from "./Pages/Homepage";
+import CreatePlaylist from "./Pages/CreatePlaylist";
+import Sidebar from "./Components/Sidebar/index";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
-import { useEffect } from "react";
-import Auth from "./Pages/Auth";
-import Landing from "./Pages/Landing";
-import { useSelector, useDispatch } from "react-redux";
-import { getTokenFromUrl } from "./Utility/services";
-import { getToken } from "./Redux/tokenSlice.js";
+import Navbar from "./Components/Navbar/index";
+import { useSelector } from "react-redux";
 
 function App() {
-  const Token = useSelector((state) => state.token.token);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    if (window.location.hash) {
-      const access_token = getTokenFromUrl(window.location.hash);
-      dispatch(getToken(access_token));
-    }
-  }, [dispatch]);
+  const { isAuth } = useSelector((state) => state.auth);
   return (
     <div className="App">
       <Router>
-        <Switch>
-          <Route path="/create-playlist">{Token !== "" ? <Auth /> : <Redirect to="/" />}</Route>
-          <Route path="/liked-playlist">{Token !== "" ? <Auth /> : <Redirect to="/" />}</Route>
-          <Route path="/">{Token !== "" ? <Redirect to="/create-playlist" /> : <Landing />}</Route>
-        </Switch>
+        <Navbar />
+        <main>
+          <Sidebar />
+          <Switch>
+            <Route path="/create-playlist">{isAuth ? <CreatePlaylist /> : <Redirect to="/" />}</Route>
+            <Route path="/">
+              <Homepage />
+            </Route>
+          </Switch>
+        </main>
       </Router>
     </div>
   );

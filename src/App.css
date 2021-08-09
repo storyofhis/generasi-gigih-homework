@@ -1,12 +1,12 @@
-body {
-  background-color: #fdfefe;
-  font-family: "Poppins", sans-serif;
+.App {
+  padding: 1rem;
+  min-height: 100vh;
+  background-color: var(--dark-background-color);
+  color: var(--dark-text-color);
 }
 
-.App {
-  max-width: 1440px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
+.App > main {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 2rem;
 }
